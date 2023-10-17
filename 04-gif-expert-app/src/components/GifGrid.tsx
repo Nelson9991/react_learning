@@ -1,12 +1,12 @@
 import GifItem from './GifItem';
-import { useFecthGifs } from '../hooks/useFecthGifs';
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 interface Props {
   category: string;
 }
 
 export const GifGrid = ({ category }: Props) => {
-  const { gifs, isLoading } = useFecthGifs(category);
+  const { gifs, isLoading } = useFetchGifs(category);
 
   return (
     <>

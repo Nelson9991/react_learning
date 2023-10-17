@@ -13,14 +13,14 @@ export const AddCategory = ({ onNewCategory }: Props) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (inputValue.trim().length <= 1) return;
+    if (inputValue.trim().length < 1) return;
 
     onNewCategory(inputValue.trim());
     setInputValue('');
   };
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit={(e) => handleSubmit(e)} aria-label='form'>
       <input
         type='text'
         placeholder='Buscar gifs'
